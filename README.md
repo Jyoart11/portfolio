@@ -46,6 +46,8 @@ Here is the folder structure of this app.
 <!--- FOLDER_STRUCTURE_START --->
 ```bash
 space-portfolio/
+  |- .claude/
+    |-- settings.local.json
   |- app/
     |-- apple-icon.png
     |-- favicon.ico
