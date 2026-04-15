@@ -9,75 +9,49 @@ import {
   SKILL_DATA,
 } from "@/constants";
 
+const SkillCategory = ({
+  title,
+  skills,
+}: {
+  title: string;
+  skills: ReadonlyArray<{
+    skill_name: string;
+    image: string;
+    width: number;
+    height: number;
+  }>;
+}) => (
+  <div className="flex flex-col items-center gap-4 w-full">
+    <h3 className="skill-category-label">{title}</h3>
+    <div className="flex flex-row justify-center flex-wrap gap-3 items-center max-w-[800px]">
+      {skills.map((skill, i) => (
+        <SkillDataProvider
+          key={skill.skill_name}
+          src={skill.image}
+          name={skill.skill_name}
+          width={skill.width}
+          height={skill.height}
+          index={i}
+        />
+      ))}
+    </div>
+  </div>
+);
+
 export const Skills = () => {
   return (
     <section
       id="skills"
-      style={{ transform: "scale(0.9)" }}
-      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden py-20"
+      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden py-20 px-4"
     >
       <SkillText />
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {SKILL_DATA.map((skill, i) => (
-          <SkillDataProvider
-            key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
-            width={skill.width}
-            height={skill.height}
-            index={i}
-          />
-        ))}
-      </div>
-
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {FRONTEND_SKILL.map((skill, i) => (
-          <SkillDataProvider
-            key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
-            width={skill.width}
-            height={skill.height}
-            index={i}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {BACKEND_SKILL.map((skill, i) => (
-          <SkillDataProvider
-            key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
-            width={skill.width}
-            height={skill.height}
-            index={i}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {FULLSTACK_SKILL.map((skill, i) => (
-          <SkillDataProvider
-            key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
-            width={skill.width}
-            height={skill.height}
-            index={i}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {OTHER_SKILL.map((skill, i) => (
-          <SkillDataProvider
-            key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
-            width={skill.width}
-            height={skill.height}
-            index={i}
-          />
-        ))}
+      <div className="flex flex-col gap-12 mt-8 w-full items-center">
+        <SkillCategory title="GenAI & LLMs" skills={SKILL_DATA} />
+        <SkillCategory title="RAG & Vector DBs" skills={FRONTEND_SKILL} />
+        <SkillCategory title="Agentic AI & Voice AI" skills={BACKEND_SKILL} />
+        <SkillCategory title="Backend & Deep Learning" skills={FULLSTACK_SKILL} />
+        <SkillCategory title="Deployment & DevOps" skills={OTHER_SKILL} />
       </div>
 
       <div className="w-full h-full absolute">

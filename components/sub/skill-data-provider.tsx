@@ -24,11 +24,11 @@ export const SkillDataProvider = ({
   });
 
   const imageVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0 },
   };
 
-  const animationDelay = 0.1;
+  const animationDelay = 0.08;
 
   return (
     <motion.div
@@ -37,9 +37,16 @@ export const SkillDataProvider = ({
       variants={imageVariants}
       animate={inView ? "visible" : "hidden"}
       custom={index}
-      transition={{ delay: index * animationDelay }}
+      transition={{ delay: index * animationDelay, duration: 0.4 }}
+      className="flex flex-col items-center justify-center"
     >
-      <Image src={`/skills/${src}`} width={width} height={height} alt={name} />
+      {src ? (
+        <Image src={`/skills/${src}`} width={width} height={height} alt={name} />
+      ) : (
+        <div className="skill-badge">
+          <span>{name}</span>
+        </div>
+      )}
     </motion.div>
   );
 };

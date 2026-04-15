@@ -1,344 +1,129 @@
-import { FaYoutube, FaFacebook } from "react-icons/fa";
 import {
-  RxDiscordLogo,
   RxGithubLogo,
-  RxInstagramLogo,
-  RxTwitterLogo,
   RxLinkedinLogo,
 } from "react-icons/rx";
+import { HiOutlineMail } from "react-icons/hi";
 
 export const SKILL_DATA = [
-  {
-    skill_name: "HTML",
-    image: "html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "CSS",
-    image: "css.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "JavaScript",
-    image: "js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Tailwind CSS",
-    image: "tailwind.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React",
-    image: "react.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Redux",
-    image: "redux.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React Query",
-    image: "reactquery.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "TypeScript",
-    image: "ts.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Next.js 14",
-    image: "next.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Framer Motion",
-    image: "framer.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Stripe",
-    image: "stripe.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Node.js",
-    image: "node.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "MongoDB",
-    image: "mongodb.png",
-    width: 40,
-    height: 40,
-  },
+  { skill_name: "GPT-4o", image: "", width: 80, height: 80 },
+  { skill_name: "Claude", image: "", width: 80, height: 80 },
+  { skill_name: "Gemini", image: "", width: 80, height: 80 },
+  { skill_name: "LangChain", image: "", width: 80, height: 80 },
+  { skill_name: "LlamaIndex", image: "", width: 80, height: 80 },
+  { skill_name: "Prompt Engineering", image: "", width: 80, height: 80 },
+  { skill_name: "Fine-tuning", image: "", width: 80, height: 80 },
+] as const;
+
+export const FRONTEND_SKILL = [
+  { skill_name: "ChromaDB", image: "", width: 80, height: 80 },
+  { skill_name: "FAISS", image: "", width: 80, height: 80 },
+  { skill_name: "pgvector", image: "", width: 80, height: 80 },
+  { skill_name: "SentenceTransformers", image: "", width: 80, height: 80 },
+  { skill_name: "Semantic Chunking", image: "", width: 80, height: 80 },
+] as const;
+
+export const BACKEND_SKILL = [
+  { skill_name: "Multi-Agent Orchestration", image: "", width: 80, height: 80 },
+  { skill_name: "Tool Calling", image: "", width: 80, height: 80 },
+  { skill_name: "Async Architecture", image: "", width: 80, height: 80 },
+  { skill_name: "ElevenLabs", image: "", width: 80, height: 80 },
+  { skill_name: "Twilio", image: "", width: 80, height: 80 },
+  { skill_name: "Multilingual STT/TTS", image: "", width: 80, height: 80 },
+] as const;
+
+export const FULLSTACK_SKILL = [
+  { skill_name: "Python", image: "", width: 80, height: 80 },
+  { skill_name: "FastAPI", image: "", width: 80, height: 80 },
+  { skill_name: "REST APIs", image: "", width: 80, height: 80 },
+  { skill_name: "Async Endpoints", image: "", width: 80, height: 80 },
+  { skill_name: "HuggingFace", image: "", width: 80, height: 80 },
+  { skill_name: "YOLO", image: "", width: 80, height: 80 },
+  { skill_name: "Transformers", image: "", width: 80, height: 80 },
+  { skill_name: "scikit-learn", image: "", width: 80, height: 80 },
+] as const;
+
+export const OTHER_SKILL = [
+  { skill_name: "AWS EC2", image: "", width: 80, height: 80 },
+  { skill_name: "Docker", image: "docker.png", width: 70, height: 70 },
+  { skill_name: "Kubernetes", image: "", width: 80, height: 80 },
+  { skill_name: "MLflow", image: "", width: 80, height: 80 },
+  { skill_name: "Git", image: "", width: 80, height: 80 },
 ] as const;
 
 export const SOCIALS = [
   {
-    name: "Instagram",
-    icon: RxInstagramLogo,
-    link: "https://instagram.com",
+    name: "LinkedIn",
+    icon: RxLinkedinLogo,
+    link: "https://www.linkedin.com/in/kalamkuri-jyothirmai-01678526a",
   },
   {
-    name: "Facebook",
-    icon: FaFacebook,
-    link: "https://facebook.com",
-  },
-  {
-    name: "Twitter",
-    icon: RxTwitterLogo,
-    link: "https://x.com/_sanidhyy",
-  },
-] as const;
-
-export const FRONTEND_SKILL = [
-  {
-    skill_name: "HTML",
-    image: "html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "CSS",
-    image: "css.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "JavaScript",
-    image: "js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Tailwind CSS",
-    image: "tailwind.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Material UI",
-    image: "mui.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React",
-    image: "react.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Redux",
-    image: "redux.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React Query",
-    image: "reactquery.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "TypeScript",
-    image: "ts.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Next.js 14",
-    image: "next.png",
-    width: 80,
-    height: 80,
-  },
-] as const;
-
-export const BACKEND_SKILL = [
-  {
-    skill_name: "Node.js",
-    image: "node.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Express.js",
-    image: "express.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "MongoDB",
-    image: "mongodb.png",
-    width: 40,
-    height: 40,
-  },
-  {
-    skill_name: "Firebase",
-    image: "firebase.png",
-    width: 55,
-    height: 55,
-  },
-  {
-    skill_name: "PostgreSQL",
-    image: "postgresql.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "MySQL",
-    image: "mysql.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Prisma",
-    image: "prisma.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Graphql",
-    image: "graphql.png",
-    width: 80,
-    height: 80,
-  },
-] as const;
-
-export const FULLSTACK_SKILL = [
-  {
-    skill_name: "React Native",
-    image: "reactnative.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Tauri",
-    image: "tauri.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Docker",
-    image: "docker.png",
-    width: 70,
-    height: 70,
-  },
-
-  {
-    skill_name: "Figma",
-    image: "figma.png",
-    width: 50,
-    height: 50,
-  },
-] as const;
-
-export const OTHER_SKILL = [
-  {
-    skill_name: "Go",
-    image: "go.png",
-    width: 60,
-    height: 60,
+    name: "GitHub",
+    icon: RxGithubLogo,
+    link: "https://github.com/Jyoart11",
   },
 ] as const;
 
 export const PROJECTS = [
   {
-    title: "Modern Next.js 14 Portfolio",
+    title: "Multilingual AI Voice Caller Platform",
     description:
-      'Embark on a journey through my professional evolution with the "Modern Next.js Portfolio" - a dynamic showcase of my skills, experiences, and passion for web development. Crafted with precision and powered by Next.js, this portfolio is more than just a static display; it\'s an immersive experience that reflects the cutting edge of modern web technologies.',
+      "RAG-based voice agent automating customer campaigns across 3+ languages. Sub-2s response time. Eliminated manual outreach for routine interactions entirely. Built with LangChain, ElevenLabs, Twilio, FastAPI & AWS EC2.",
     image: "/projects/project-1.png",
-    link: "https://example.com",
+    link: "https://github.com/Jyoart11",
   },
   {
-    title: "Interactive Cards Portfolio",
+    title: "Multimodal Retrieval System",
     description:
-      'Step into the extraordinary world of my professional journey through the "Interactive Cards Portfolio" - an innovative and visually captivating platform that redefines the traditional portfolio experience. Ditching the conventional static layout, this portfolio leverages interactive cards to showcase my skills, projects, and personality in an engaging and dynamic manner.',
+      "First unified OCR + image embedding pipeline at IICL. Combines text and visual document intelligence into a single enterprise search system — no more switching between tools. Built with Python, YOLO, OCR, ChromaDB & SentenceTransformers.",
     image: "/projects/project-2.png",
-    link: "https://example.com",
+    link: "https://github.com/Jyoart11",
   },
   {
-    title: "Space Themed Website",
+    title: "AI Multi-Agent Platform",
     description:
-      'Embark on an interstellar journey with my "Space Themed Website", a mesmerizing space-themed website that invites you to explore the cosmic wonders beyond our world. Immerse yourself in an awe-inspiring digital experience that blends cutting-edge design with the mysteries of the universe.',
+      "Multi-agent orchestration across Banking, Education, and Sales — KYC processing, loan approvals, admissions RAG, and sales nurturing on async event-driven architecture. Built with FastAPI, Celery, Redis, FAISS & ReactFlow.",
     image: "/projects/project-3.png",
-    link: "https://example.com",
+    link: "https://github.com/Jyoart11",
+  },
+  {
+    title: "Icognito — AI Chatbot Builder",
+    description:
+      "Self-serve platform with 6-format ingestion (PDF, URL, DOCX, CSV, images, multilingual text). Lets non-technical teams deploy custom AI assistants independently — no engineering involvement needed. Built with LangChain, FastAPI, ChromaDB, Docker & AWS EC2.",
+    image: "/projects/project-4.svg",
+    link: "https://github.com/Jyoart11",
+  },
+  {
+    title: "RAG Q&A Engine",
+    description:
+      "Semantic chunking + SentenceTransformer embeddings + vector retrieval with built-in evaluation loop. Core knowledge retrieval engine powering all IICL AI products. Built with SentenceTransformers, ChromaDB, LangChain & FastAPI.",
+    image: "/projects/project-5.svg",
+    link: "https://github.com/Jyoart11",
   },
 ] as const;
 
 export const FOOTER_DATA = [
   {
-    title: "Community",
+    title: "Links",
     data: [
-      {
-        name: "YouTube",
-        icon: FaYoutube,
-        link: "https://youtube.com",
-      },
       {
         name: "GitHub",
         icon: RxGithubLogo,
-        link: "https://github.com",
+        link: "https://github.com/Jyoart11",
       },
       {
-        name: "Discord",
-        icon: RxDiscordLogo,
-        link: "https://discord.com",
-      },
-    ],
-  },
-  {
-    title: "Social Media",
-    data: [
-      {
-        name: "Instagram",
-        icon: RxInstagramLogo,
-        link: "https://instagram.com",
-      },
-      {
-        name: "Twitter",
-        icon: RxTwitterLogo,
-        link: "https://x.com/_sanidhyy",
-      },
-      {
-        name: "Linkedin",
+        name: "LinkedIn",
         icon: RxLinkedinLogo,
-        link: "https://linkedin.com",
+        link: "https://www.linkedin.com/in/kalamkuri-jyothirmai-01678526a",
       },
     ],
   },
   {
-    title: "About",
+    title: "Contact",
     data: [
       {
-        name: "Become Sponsor",
-        icon: null,
-        link: "https://youtube.com",
-      },
-      {
-        name: "Learning about me",
-        icon: null,
-        link: "https://example.com",
-      },
-      {
-        name: "Contact Me",
-        icon: null,
-        link: "mailto:contact@example.com",
+        name: "Email Me",
+        icon: HiOutlineMail,
+        link: "mailto:kalamkurijyothirmai@gmail.com",
       },
     ],
   },
@@ -360,5 +145,5 @@ export const NAV_LINKS = [
 ] as const;
 
 export const LINKS = {
-  sourceCode: "https://github.com/sanidhyy/space-portfolio",
+  sourceCode: "https://github.com/Jyoart11",
 };

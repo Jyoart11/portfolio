@@ -3,18 +3,27 @@
 import {
   Points,
   PointMaterial,
-  type PointsInstancesProps,
 } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as random from "maath/random";
 import { useState, useRef, Suspense } from "react";
 import type { Points as PointsType } from "three";
 
-export const StarBackground = (props: PointsInstancesProps) => {
-  const ref = useRef<PointsType | null>(null);
-  const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000), { radius: 1.2 }),
-  );
+const StarBackground = () => {
+  const ref = useRef<PointsType>(null);
+  const [sphere] = useState(() => {
+    const positions = new Float32Array(5000 * 3);
+    random.inSphere(positions, { radius: 1.2 });
+
+    // Replace any NaN values with 0
+    for (let i = 0; i < positions.length; i++) {
+      if (isNaN(positions[i])) {
+        positions[i] = 0;
+      }
+    }
+
+    return positions;
+  });
 
   useFrame((_state, delta) => {
     if (ref.current) {
@@ -28,9 +37,8 @@ export const StarBackground = (props: PointsInstancesProps) => {
       <Points
         ref={ref}
         stride={3}
-        positions={new Float32Array(sphere)}
-        frustumCulled
-        {...props}
+        positions={sphere}
+        frustumCulled={false}
       >
         <PointMaterial
           transparent

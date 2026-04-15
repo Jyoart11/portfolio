@@ -2,7 +2,7 @@
 
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Link from "next/link";
 
 import {
   slideInFromLeft,
@@ -15,61 +15,60 @@ export const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
+      className="flex flex-col items-center justify-center px-6 md:px-20 mt-40 w-full z-[20]"
     >
-      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
+      <div className="h-full w-full flex flex-col gap-5 justify-center items-center text-center max-w-[900px] mx-auto">
         <motion.div
           variants={slideInFromTop}
-          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]]"
+          className="Welcome-box py-[8px] px-[12px] border border-[#7042f88b] opacity-[0.9]"
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
-            Fullstack Developer Portfolio
+            GenAI / LLM Engineer — RAG · Agents · Voice AI · Multimodal AI
           </h1>
         </motion.div>
 
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 text-6xl text-bold text-white max-w-[600px] w-auto h-auto"
+          className="flex flex-col gap-6 mt-6 text-5xl md:text-7xl font-bold text-white w-auto h-auto font-heading"
         >
-          <span>
-            Providing{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              the best
+          <span className="leading-tight">
+            Building{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-cyan-500">
+              production-grade
             </span>{" "}
-            project experience.
+            AI systems.
           </span>
         </motion.div>
 
         <motion.p
-          variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-400 my-5 max-w-[600px]"
+          variants={slideInFromRight(0.8)}
+          className="text-base md:text-lg text-gray-400 my-5 max-w-[700px] leading-relaxed"
         >
-          I&apos;m a Full Stack Software Engineer with experience in Website,
-          Mobile, and Software development. Check out my projects and skills.
+          GenAI Engineer with 1.5+ years delivering production-grade AI systems
+          at IICL. Independently shipped 5 end-to-end AI products — from
+          multilingual Voice AI to multimodal retrieval pipelines. I build AI
+          that works in production, not just in demos.
         </motion.p>
 
-        <motion.a
+        <motion.div
           variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+          className="flex flex-row gap-4"
         >
-          Learn more
-        </motion.a>
+          <Link
+            href="#projects"
+            className="py-3 px-8 button-primary text-center text-white cursor-pointer rounded-lg text-sm font-medium tracking-wide"
+          >
+            View Projects
+          </Link>
+          <Link
+            href="mailto:kalamkurijyothirmai@gmail.com"
+            className="py-3 px-8 text-center text-gray-300 cursor-pointer rounded-lg text-sm font-medium tracking-wide border border-gray-700 hover:border-purple-500/50 hover:text-white transition-all duration-300"
+          >
+            Get in Touch
+          </Link>
+        </motion.div>
       </div>
-
-      <motion.div
-        variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center"
-      >
-        <Image
-          src="/hero-bg.svg"
-          alt="work icons"
-          height={650}
-          width={650}
-          draggable={false}
-          className="select-none"
-        />
-      </motion.div>
     </motion.div>
   );
 };
