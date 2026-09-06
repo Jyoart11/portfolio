@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# root-level resume source (canonical copy lives in public/resume.pdf)
+/Jyothirmai_Kalamkuri_AI_Engineer*.pdf
