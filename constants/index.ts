@@ -51,27 +51,45 @@ export const TECH_STRIP = [
 ] as const;
 
 // About / Engineering Approach areas
+// icon slug is resolved in the component to a react-icons component
 export const APPROACH = [
   {
     id: "01",
     title: "AI Engineering",
     desc: "LLMs, RAG, agents, prompt engineering, evaluation.",
+    icon: "cpu",
+    accent: "from-purple-500/25 to-fuchsia-500/10",
   },
   {
     id: "02",
     title: "Backend Engineering",
     desc: "Python, FastAPI, REST APIs, databases.",
+    icon: "server",
+    accent: "from-indigo-500/25 to-purple-500/10",
   },
   {
     id: "03",
     title: "Full Stack",
     desc: "React, Next.js, TypeScript, responsive interfaces.",
+    icon: "code",
+    accent: "from-cyan-500/25 to-indigo-500/10",
   },
   {
     id: "04",
     title: "Cloud & Production",
     desc: "AWS, Azure, Docker, CI/CD, monitoring.",
+    icon: "cloud",
+    accent: "from-emerald-500/25 to-cyan-500/10",
   },
+] as const;
+
+// Recruiter quick-facts under hero
+export const QUICK_FACTS = [
+  { label: "Currently", value: "AI Engineer at IICL" },
+  { label: "Type", value: "Full-time" },
+  { label: "Experience", value: "2+ years" },
+  { label: "Location", value: "Hyderabad, India" },
+  { label: "Availability", value: "Open to opportunities" },
 ] as const;
 
 // Featured projects
@@ -81,6 +99,8 @@ export const FEATURED_PROJECTS = [
     title: "VeroPath",
     tagline: "Multi-Agent ESG Compliance AI Platform",
     role: "AI Engineer / AI Backend Engineer",
+    accent: "from-purple-500/40 via-fuchsia-500/20 to-transparent",
+    icon: "agents",
     summary:
       "Production-oriented multi-agent AI backend for ESG compliance reporting aligned with UAE FDL#11 regulatory requirements.",
     description:
@@ -104,6 +124,8 @@ export const FEATURED_PROJECTS = [
     title: "iVaak AI",
     tagline: "Multi-Tenant AI Concierge Platform",
     role: "Full-Stack / AI Engineer",
+    accent: "from-cyan-500/40 via-indigo-500/20 to-transparent",
+    icon: "voice",
     summary:
       "Production multi-tenant AI concierge platform for real-estate developers combining conversational AI, RAG, voice AI, lead capture, outbound calling, and WhatsApp engagement.",
     description:

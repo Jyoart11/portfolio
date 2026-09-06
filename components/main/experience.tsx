@@ -7,9 +7,13 @@ import { EXPERIENCE } from "@/constants";
 export const Experience = () => {
   return (
     <section id="experience" className="section relative">
+      <div className="section-orb section-orb-right" aria-hidden />
       <div className="mx-auto max-w-[1240px] px-4 md:px-8">
         <div className="flex flex-col items-start gap-4 md:gap-5 max-w-[820px]">
-          <span className="eyebrow">Experience</span>
+          <div className="section-eyebrow">
+            <span className="section-eyebrow-line" aria-hidden />
+            <span className="eyebrow">Experience</span>
+          </div>
           <h2 className="font-heading text-white text-[32px] md:text-[48px] font-semibold leading-tight tracking-tight">
             2+ years of{" "}
             <span className="gradient-text">production AI</span> engineering.

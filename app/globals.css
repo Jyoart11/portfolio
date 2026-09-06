@@ -61,6 +61,64 @@ html {
   color: #a78bfa;
 }
 
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-eyebrow-line {
+  width: 32px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 92, 246, 0.6)
+  );
+  display: inline-block;
+}
+
+/* Section orbs — subtle background glow anchors */
+.section-orb {
+  position: absolute;
+  pointer-events: none;
+  width: 520px;
+  height: 520px;
+  border-radius: 999px;
+  filter: blur(90px);
+  opacity: 0.22;
+  z-index: -1;
+}
+
+.section-orb-left {
+  left: -160px;
+  top: 20%;
+  background: radial-gradient(
+    circle,
+    rgba(139, 92, 246, 0.4) 0%,
+    transparent 60%
+  );
+}
+
+.section-orb-right {
+  right: -160px;
+  top: 30%;
+  background: radial-gradient(
+    circle,
+    rgba(34, 211, 238, 0.28) 0%,
+    transparent 60%
+  );
+}
+
+.card-hover-lift {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-4px);
+}
+
 /* Buttons */
 .btn-primary {
   display: inline-flex;

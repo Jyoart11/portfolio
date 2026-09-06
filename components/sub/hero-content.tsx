@@ -5,7 +5,7 @@ import Link from "next/link";
 import { RxGithubLogo, RxLinkedinLogo } from "react-icons/rx";
 import { HiOutlineMail } from "react-icons/hi";
 
-import { CONTACT } from "@/constants";
+import { CONTACT, QUICK_FACTS } from "@/constants";
 import {
   slideInFromLeft,
   slideInFromRight,
@@ -17,15 +17,15 @@ export const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="relative z-10 flex flex-col items-center justify-center px-6 md:px-10 py-24 md:py-32 w-full"
+      className="relative z-10 flex flex-col items-center justify-center px-6 md:px-10 py-24 md:py-28 w-full"
     >
       <div className="flex flex-col gap-6 md:gap-8 items-center text-center max-w-[980px] mx-auto">
         <motion.div
           variants={slideInFromTop}
-          className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 backdrop-blur"
+          className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/[0.06] px-3 py-1.5 backdrop-blur"
         >
           <span className="pulse-dot" aria-hidden />
-          <span className="text-[12px] font-medium tracking-[0.14em] uppercase text-gray-300">
+          <span className="text-[12px] font-medium tracking-[0.14em] uppercase text-emerald-100/90">
             Available for AI engineering work
           </span>
         </motion.div>
@@ -89,6 +89,27 @@ export const HeroContent = () => {
             <HiOutlineMail className="h-4 w-4" />
             Contact Me
           </Link>
+        </motion.div>
+
+        <motion.div
+          variants={slideInFromRight(1.1)}
+          className="mt-8 md:mt-10 w-full max-w-[960px]"
+        >
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-px rounded-2xl overflow-hidden border border-white/[0.06] bg-white/[0.02] backdrop-blur">
+            {QUICK_FACTS.map((f) => (
+              <div
+                key={f.label}
+                className="flex flex-col items-center gap-1 py-4 px-3 bg-[#0b0620]/60"
+              >
+                <span className="text-[10px] uppercase tracking-[0.16em] text-gray-500 font-heading">
+                  {f.label}
+                </span>
+                <span className="text-[13px] md:text-[14px] text-white font-medium text-center leading-tight">
+                  {f.value}
+                </span>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </motion.div>

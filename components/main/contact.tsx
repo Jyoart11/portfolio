@@ -19,7 +19,11 @@ export const Contact = () => {
           className="card-featured p-8 md:p-14 text-center"
         >
           <div className="relative z-[1] flex flex-col items-center gap-6 max-w-[720px] mx-auto">
-            <span className="eyebrow">Contact</span>
+            <div className="section-eyebrow">
+              <span className="section-eyebrow-line" aria-hidden />
+              <span className="eyebrow">Contact</span>
+              <span className="section-eyebrow-line" aria-hidden />
+            </div>
             <h2 className="font-heading text-white text-[32px] md:text-[52px] font-semibold leading-tight tracking-tight">
               Have an{" "}
               <span className="gradient-text">AI problem worth solving</span>?
