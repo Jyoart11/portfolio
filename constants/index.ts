@@ -301,6 +301,7 @@ export const EXPERIENCE = [
   {
     role: "AI Engineer",
     company: "IICL",
+    employmentType: "Full-time",
     period: "September 2024 – Present",
     location: "Hyderabad, India",
     description:

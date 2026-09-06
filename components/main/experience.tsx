@@ -37,8 +37,13 @@ export const Experience = () => {
                   <h3 className="font-heading text-white text-[22px] md:text-[24px] font-semibold">
                     {exp.role}
                   </h3>
-                  <div className="text-purple-300 text-[14px] font-medium">
-                    {exp.company}
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-purple-300 text-[14px] font-medium">
+                      {exp.company}
+                    </span>
+                    <span className="chip chip-solid !py-[3px] !px-2.5 !text-[11px]">
+                      {exp.employmentType}
+                    </span>
                   </div>
                   <div className="text-gray-500 text-[13px] font-mono tracking-wide">
                     {exp.period}
