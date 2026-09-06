@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 import { RxGithubLogo, RxLinkedinLogo } from "react-icons/rx";
 import { HiOutlineMail } from "react-icons/hi";
 
@@ -26,7 +27,7 @@ export const HeroContent = () => {
         >
           <span className="pulse-dot" aria-hidden />
           <span className="text-[12px] font-medium tracking-[0.14em] uppercase text-emerald-100/90">
-            Available for AI engineering work
+            Immediate joiner · Open to AI engineering roles
           </span>
         </motion.div>
 
@@ -64,6 +65,16 @@ export const HeroContent = () => {
         >
           <Link href="#projects" className="btn-primary">
             View Projects
+          </Link>
+          <Link
+            href={CONTACT.resume}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="btn-secondary"
+            aria-label="Download resume"
+          >
+            <ArrowDownTrayIcon className="h-4 w-4" />
+            Download Resume
           </Link>
           <Link
             href={CONTACT.github}

@@ -1,5 +1,6 @@
 import { About } from "@/components/main/about";
 import { Contact } from "@/components/main/contact";
+import { Credentials } from "@/components/main/credentials";
 import { Experience } from "@/components/main/experience";
 import { FeaturedProjects } from "@/components/main/featured-projects";
 import { FullStackCloud } from "@/components/main/fullstack-cloud";
@@ -19,6 +20,7 @@ export default function Home() {
       <GenAIExpertise />
       <FullStackCloud />
       <Experience />
+      <Credentials />
       <Workflow />
       <LiveProjects />
       <Contact />

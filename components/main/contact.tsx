@@ -2,6 +2,10 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import {
+  ArrowDownTrayIcon,
+  PhoneIcon,
+} from "@heroicons/react/24/outline";
 import { RxGithubLogo, RxLinkedinLogo } from "react-icons/rx";
 import { HiOutlineMail } from "react-icons/hi";
 
@@ -34,12 +38,18 @@ export const Contact = () => {
             </p>
 
             <div className="mt-2 flex flex-wrap gap-3 justify-center">
-              <Link
-                href={`mailto:${CONTACT.email}`}
-                className="btn-primary"
-              >
+              <Link href={`mailto:${CONTACT.email}`} className="btn-primary">
                 <HiOutlineMail className="h-4 w-4" />
                 Email
+              </Link>
+              <Link
+                href={CONTACT.resume}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="btn-secondary"
+              >
+                <ArrowDownTrayIcon className="h-4 w-4" />
+                Resume
               </Link>
               <Link
                 href={CONTACT.github}
@@ -61,10 +71,38 @@ export const Contact = () => {
               </Link>
             </div>
 
-            <div className="mt-4 flex flex-col sm:flex-row items-center gap-x-6 gap-y-2 text-[13px] text-gray-400">
-              <span className="font-mono">{CONTACT.email}</span>
-              <span className="hidden sm:inline text-gray-600">·</span>
-              <span>{CONTACT.location}</span>
+            <div className="mt-6 pt-6 border-t border-white/[0.06] w-full grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+              <div className="flex flex-col gap-1">
+                <span className="text-[11px] uppercase tracking-[0.16em] text-gray-500">
+                  Email
+                </span>
+                <Link
+                  href={`mailto:${CONTACT.email}`}
+                  className="text-[13.5px] text-white font-mono hover:text-purple-300 transition-colors break-all"
+                >
+                  {CONTACT.email}
+                </Link>
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-[11px] uppercase tracking-[0.16em] text-gray-500">
+                  Phone
+                </span>
+                <Link
+                  href={CONTACT.phoneHref}
+                  className="text-[13.5px] text-white font-mono hover:text-purple-300 transition-colors inline-flex items-center gap-2"
+                >
+                  <PhoneIcon className="h-3.5 w-3.5" />
+                  {CONTACT.phone}
+                </Link>
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-[11px] uppercase tracking-[0.16em] text-gray-500">
+                  Location
+                </span>
+                <span className="text-[13.5px] text-white">
+                  {CONTACT.location}
+                </span>
+              </div>
             </div>
           </div>
         </motion.div>

@@ -25,6 +25,7 @@ export const Footer = () => {
             </p>
             <div className="mt-2 flex flex-col gap-1 text-[13px] text-gray-400">
               <span className="font-mono">{CONTACT.email}</span>
+              <span className="font-mono">{CONTACT.phone}</span>
               <span>{CONTACT.location}</span>
             </div>
           </div>

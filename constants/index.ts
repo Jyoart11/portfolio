@@ -3,9 +3,13 @@ import { HiOutlineMail } from "react-icons/hi";
 
 export const CONTACT = {
   email: "kalamkurijyothirmai@gmail.com",
+  phone: "+91 73963 55894",
+  phoneHref: "tel:+917396355894",
   github: "https://github.com/Jyoart11",
-  linkedin: "#",
+  linkedin:
+    "https://www.linkedin.com/in/kalamkuri-jyothirmai-01678526a",
   location: "Hyderabad, India",
+  resume: "/resume.pdf",
 } as const;
 
 export const NAV_LINKS = [
@@ -89,7 +93,35 @@ export const QUICK_FACTS = [
   { label: "Type", value: "Full-time" },
   { label: "Experience", value: "2+ years" },
   { label: "Location", value: "Hyderabad, India" },
-  { label: "Availability", value: "Open to opportunities" },
+  { label: "Availability", value: "Immediate joiner" },
+] as const;
+
+// Certifications
+export const CERTIFICATIONS = [
+  {
+    title: "AWS Academy Graduate — Cloud Architecting",
+    issuer: "Amazon Web Services",
+    note: "Infrastructure on AWS & cloud best practices",
+  },
+  {
+    title: "AWS Academy Graduate — Data Analytics",
+    issuer: "Amazon Web Services",
+    note: "December 2023",
+  },
+  {
+    title: "AWS Academy Graduate — Cloud Foundations",
+    issuer: "Amazon Web Services",
+    note: "October 2022",
+  },
+] as const;
+
+// Education
+export const EDUCATION = [
+  {
+    degree: "B.Tech, Electronics & Communication Engineering",
+    school: "Sreenidhi Institute of Science and Technology",
+    period: "2020 – 2024",
+  },
 ] as const;
 
 // Featured projects
