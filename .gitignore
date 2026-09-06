@@ -35,5 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# root-level resume source (canonical copy lives in public/resume.pdf)
-/Jyothirmai_Kalamkuri_AI_Engineer*.pdf
+# local resume source copies (canonical is public/resume.pdf)
+Jyothirmai_Kalamkuri_AI_Engineer*.pdf
+!public/resume.pdf

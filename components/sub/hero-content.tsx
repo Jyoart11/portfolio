@@ -66,8 +66,9 @@ export const HeroContent = () => {
           <Link href="#projects" className="btn-primary">
             View Projects
           </Link>
-          <Link
+          <a
             href={CONTACT.resume}
+            download="Jyothirmai_Kalamkuri_AI_Engineer.pdf"
             target="_blank"
             rel="noreferrer noopener"
             className="btn-secondary"
@@ -75,7 +76,7 @@ export const HeroContent = () => {
           >
             <ArrowDownTrayIcon className="h-4 w-4" />
             Download Resume
-          </Link>
+          </a>
           <Link
             href={CONTACT.github}
             target="_blank"
